@@ -221,16 +221,8 @@ resource "aws_efs_file_system" "EFS" {
 
 resource "aws_efs_mount_target" "efs-mount" {
    file_system_id  = "${aws_efs_file_system.EFS.id}"
-   subnet_id = "${aws_pub_sub_name.0.id}"
+   subnet_id = "${aws_subnet.Public_Subnet.id}
    security_groups = ["${aws_security_group.efs-sg.id}"]
-}
-resource "aws_efs_mount_target" "efs-mount-b" {
-   file_system_id  = "${aws_efs_file_system.EFS.id}"
-   subnet_id = "${aws_subnet.public_subnet.1.id}"
-   security_groups = ["${aws_security_group.efs-sg.id}"]
-}
-resource "aws_security_group" "efs-sg" {
-  name_prefix = "efs-sg"
 }
 
 resource "aws_security_group_rule" "efs-sg_ingress" {
