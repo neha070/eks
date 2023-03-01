@@ -1,0 +1,17 @@
+region="us-west-1"
+vpc_name="vpc_terra_qa"
+vpc_cidr_block="10.0.0.0/16"
+pub_sub_name="Pub-Subnet_qa"
+public_subnet_cidr_block=["10.0.1.0/24","10.0.2.0/24"]
+public_subnet_AZ=["us-west-1b","us-west-1c"]
+InternetGw_name="igw_qa"
+Eip-name="ElasticIP_new_qa"
+Public_securitygrp="Public_SG_qa"
+pub_instance_name="Public-Instance_qa"
+ami_id="ami-052efd3df9dad4825"
+inst_type="t2.medium"
+Eksclusterterra="iam_EKS_Cluster_qa"
+EKS_cluster_sgrp_priv="EKSCluster_SG_qa"
+EKs_cluster_terra="EKSCluster_new_qa"
+Nodename="Nodes_EKSCluster_qa"
+node_eksg="ng_qa"
